@@ -1,6 +1,3 @@
-
-
-#define  STRICT
 #include <windows.h>
 #include <tchar.h>
 #include <stdio.h>
@@ -17,8 +14,7 @@ void getMappedNetworkLocations()
     LPWSTR drive;
     char drive_chars[] = "a:";
     wchar_t wtext[3];
-
-    while (strcmp(drive_chars, "{:")) // {: is the end of the drive list (this is the char after z in the ascii table)
+    while (drive_chars[0] != ('z' + 1))
     {
         mbstowcs(wtext, drive_chars, strlen(drive_chars) + 1);//Plus null
         drive = wtext;
@@ -51,7 +47,6 @@ void getMappedNetworkLocations()
         }
         drive_chars[0] += 1;
     }
-
 }
 
 
