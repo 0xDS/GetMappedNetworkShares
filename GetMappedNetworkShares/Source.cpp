@@ -14,7 +14,7 @@ void getMappedNetworkLocations()
     LPWSTR drive;
     char drive_chars[] = "a:";
     wchar_t wtext[3];
-    while (drive_chars[0] != ('z' + 1))
+    while (drive_chars[0] <= ('z'))
     {
         mbstowcs(wtext, drive_chars, strlen(drive_chars) + 1);//Plus null
         drive = wtext;
