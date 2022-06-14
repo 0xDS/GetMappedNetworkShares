@@ -5,7 +5,7 @@
 
 #pragma comment(lib, "mpr.lib")
 
-// This function gets all the mapped network locations
+// This function prints all the mapped network locations
 // (added by the command "net use Z: \\DEVICE-NAME-OR-IP\SHARED-FOLDER" for example.)
 void getMappedNetworkLocations()
 {
